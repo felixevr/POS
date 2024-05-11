@@ -44,4 +44,3 @@ namespace POS.Infrastructure.Persistences.Contexts.Configurations
         }
     }
 }
-jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR

@@ -37,6 +37,12 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
+//**************** Mi ****************************
+
+// ListCategories(BaseFiltersRequest filters);
+
+//**************** Mi ****************************
+
 app.MapControllers();
 
 app.Run();
