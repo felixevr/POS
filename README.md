@@ -1,2 +1,2 @@
 # POS
-System
+Point Of Sale - System
