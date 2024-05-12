@@ -7,13 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Validators\" />
     <Folder Include="Services\" />
     <Folder Include="Mappers\" />
     <Folder Include="Interfaces\" />
     <Folder Include="Extensions\" />
-    <Folder Include="Dtos\" />
-    <Folder Include="Commons\" />
   </ItemGroup>
 
   <ItemGroup>
