@@ -1,6 +1,6 @@
 ﻿namespace POS.Utilities.Static
 {
-    public class ReplayMessage
+    public class ReplyMessage
     {
         public const string MESSAGE_QUERY = "Consulta exitosa.";
         public const string MESSAGE_QUERY_EMPTY = "No se encontraron registros.";
