@@ -13,7 +13,7 @@
             get => NumRecordsPage;
             set
             {
-                NumRecordsPage = value > NumMaxRecordsPage ? NumMaxRecordsPage : value;
+                NumRecordsPage = (value > NumMaxRecordsPage) ? NumMaxRecordsPage : value;
             }
         }
     }

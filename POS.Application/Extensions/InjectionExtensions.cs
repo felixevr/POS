@@ -11,7 +11,7 @@ namespace POS.Application.Extensions
     {
         public static IServiceCollection AddInjectionApplication(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddSingleton(configuration);
+            services.AddSingleton(configuration); // Create an IConfiguration instance for the entire app
             services.AddFluentValidation(options => options.RegisterValidatorsFromAssemblies(AppDomain.CurrentDomain.GetAssemblies().Where(p => !p.IsDynamic)));
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
             services.AddScoped<ICategoryApplication, CategoryApplication>();
