@@ -92,7 +92,7 @@ namespace POS.Application.Services
                 response.Errors = validationResult.Errors;
                 return response;
             }
-            
+
             var category = _mapper.Map<Category>(requestDto);
             response.Data = await _unitOfWork.Category.RegisterCategory(category);
 
@@ -150,7 +150,7 @@ namespace POS.Application.Services
 
             response.Data = await _unitOfWork.Category.RemoveCategory(categoryId);
 
-            if (response.Data) 
+            if (response.Data)
             {
                 response.IsSuccess = true;
                 response.Message = ReplyMessage.MESSAGE_DELETE;

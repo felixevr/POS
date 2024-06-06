@@ -16,14 +16,14 @@ namespace POS.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> ListCategries([FromBody] BaseFiltersRequest filters)
+        public async Task<IActionResult> ListCategories([FromBody] BaseFiltersRequest filters)
         {
             var response = await _categoryApplication.ListCategories(filters);
             return Ok(response);
         }
 
         [HttpGet("Select")]
-        public async Task<IActionResult> ListSelectCategpries()
+        public async Task<IActionResult> ListSelectCategories()
         {
             var response = await _categoryApplication.ListSelectCategories();
             return Ok(response);

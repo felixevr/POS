@@ -50,9 +50,11 @@ namespace POS.Infrastructure.Persistences.Repositories
             if (filters.Sort is null) filters.Sort = "CategoryId";
 
             response.TotalRecords = await categories.CountAsync();
-            response.Items = await Ordering(filters, categories, !(bool)filters.Download!).ToListAsync();
+            bool download = filters.Download ?? false; // Solution to avoid Runtime error when Download is null
+            response.Items = await Ordering(filters, categories, !download).ToListAsync();
+            //response.Items = await Ordering(filters, categories, !(bool)filters.Download!).ToListAsync();
 
-            return response; 
+            return response;
         }
 
         public async Task<IEnumerable<Category>> ListSelectCategories()
