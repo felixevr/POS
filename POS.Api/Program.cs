@@ -3,11 +3,11 @@ using POS.Application.Extensions;
 
 
 var builder = WebApplication.CreateBuilder(args);
-var Configuration = builder.Configuration; // Definido por mi
+var Configuration = builder.Configuration; // Added
 
 // Add services to the container.
-builder.Services.AddInjectionInfrastructure(Configuration); // Definido por mi
-builder.Services.AddInjectionApplication(Configuration); // Definido por mi
+builder.Services.AddInjectionInfrastructure(Configuration); // Added
+builder.Services.AddInjectionApplication(Configuration); // Added
 
 builder.Services.AddControllers();
 

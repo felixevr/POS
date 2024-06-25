@@ -52,7 +52,7 @@ namespace POS.Infrastructure.Persistences.Repositories
             response.TotalRecords = await categories.CountAsync();
             bool download = filters.Download ?? false; // Solution to avoid Runtime error when Download is null
             response.Items = await Ordering(filters, categories, !download).ToListAsync();
-            //response.Items = await Ordering(filters, categories, !(bool)filters.Download!).ToListAsync();
+            //response.Items = await Ordering(filters, categories, !(bool)filters.Download!).ToListAsync(); // Original solution
 
             return response;
         }
