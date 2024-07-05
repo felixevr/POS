@@ -1,5 +1,7 @@
 using POS.Infrastructure.Extensions;
 using POS.Application.Extensions;
+using POS.Api.Controllers;
+using AssemblyExample;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -45,9 +47,11 @@ app.UseAuthorization();
 //**************** Mi ****************************
 
 // ListCategories(BaseFiltersRequest filters);
-
+var testing = new SampleClass();
+testing.Main();
 //**************** Mi ****************************
 
 app.MapControllers();
 
 app.Run();
+

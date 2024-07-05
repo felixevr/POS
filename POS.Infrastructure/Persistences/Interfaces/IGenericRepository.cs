@@ -1,10 +1,17 @@
-﻿using POS.Infrastructure.Commons.Bases.Request;
+﻿using POS.Domain.Entities;
+using POS.Infrastructure.Commons.Bases.Request;
+using System.Linq.Expressions;
 
 namespace POS.Infrastructure.Persistences.Interfaces
 {
-    public interface IGenericRepository<T>
+    public interface IGenericRepository<T> where T : BaseEntity
     {
-        //public IQueryable<T> Ordering<T>(BasePaginationRequest request, IQueryable<T> queryable, bool pagination = false); //{ get; set; }
-        //Mil peos con esta interfaz que aún no implementamos por completo
+        Task<IEnumerable<T>> GetAllAsync();
+        Task<T> GetByIdAsync(int id);
+        Task<bool> RegisterAsync(T entity);
+        Task<bool> EditAsync(T entity);
+        Task<bool> RemoveAsync(int id);
+        IQueryable<T> GetEntityQuery(Expression<Func<T, bool>>? filter = null);
+        IQueryable<TDTO> Ordering<TDTO>(BasePaginationRequest request, IQueryable<TDTO> queryable, bool pagination = false) where TDTO : class;
     }
 }
