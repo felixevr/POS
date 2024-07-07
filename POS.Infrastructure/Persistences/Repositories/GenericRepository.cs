@@ -25,7 +25,7 @@ namespace POS.Infrastructure.Persistences.Repositories
         {
             var getAll = await _entity
                 .Where(x => x.State.Equals((int)StateTypes.Active) && x.AuditDeleteUser == null && x.AuditDeleteDate == null).AsNoTracking().ToListAsync();
-            
+
             return getAll;
         }
 
@@ -39,7 +39,7 @@ namespace POS.Infrastructure.Persistences.Repositories
         public async Task<bool> RegisterAsync(T entity)
         {
             entity.AuditCreateUser = 1;
-            entity.AuditUpdateDate = DateTime.Now;
+            entity.AuditCreateDate = DateTime.Now;
 
             await _context.AddAsync(entity);
 
